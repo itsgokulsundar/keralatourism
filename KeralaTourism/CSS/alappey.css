@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.navbar{
+  margin-top: 30px;
+  box-shadow: none;
+}
+.wayanad-block{
+  width:100%;
+  position: absolute;
+  color: white;
+  bottom: 170px;
+  
+}
+.wayanad-block h2{
+  font-size: 220px;
+  color:white;
+}

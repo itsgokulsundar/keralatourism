@@ -1,0 +1,23 @@
+*{
+  margin:0;
+  padding:0;
+}
+.navbar{
+  /* background-color: rgba(0,0,0,.9); */
+}
+.districts-main{
+  margin-top: 120px;
+  margin-bottom: 100px;
+}
+.district-card-column{
+  height:100%;
+}
+.districts-link:hover{
+  opacity: .7;
+}
+.districts-sub{
+  width: 20rem;
+}
+.card-text{
+  font-size: 18px;
+}
