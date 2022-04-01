@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.navbar{
+  margin-top: 30px;
+  box-shadow: none;
+}
+.wayanad-block{
+  width:100%;
+  position: absolute;
+  color: white;
+  bottom: 170px;
+  
+}
+.wayanad-block h2{
+  font-size: 220px;
+  color:rgb(187, 228, 92)
+
+}
+.wayanad-main{
+  margin-top: 100px;
+}
+.wayanad-sec-image{
+  position: relative;
+  margin-top: -320px;
+  margin-left: 0px;
+}
+.wayanad-sec .wayanad-col{
+  margin-top:-50px;
+}
+.wayanad-sec-tholpetty{
+  margin-bottom: 150px;
+}
+.wayanad-sec-tholpetty p{
+  font-size: 20px;
+}
+
+.wayanad-sec-tholpetty-img{
+  margin-left:-33px;
+}
+.wayanad-row{ 
+margin-top:150px;
+}
+.wayanad-row p{
+  font-size: 20px;
+}
+.wayanad-row h4{
+  font-size: 40px;
+  margin:40px 30px 30px 0px;
+}
