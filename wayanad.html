@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/wayanad.css">
+    <title>Kerala Tourism-Wayanad</title>
+  </head>
+  <body>
+      <header>
+        <!--login-modal-->
+        <div id="login" class="modal fade" role="dialog"> 
+          <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Login</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            <form>
+              <input type="text" name="username" class="username form-control" placeholder="Username"/>
+              <input type="password" name="password" class="password form-control" placeholder="Password"/>
+              <input class="btn login" type="submit" value="Login" />
+            </form>
+          </div><!--modal-body-->
+          <div class="modal-footer">
+            <a href="#signup" data-dismiss="modal" data-toggle="modal">Create account?</a>
+          </div> <!--modal-footer-->
+          </div><!--modal-content-->
+          </div><!--modal-dialogue-->
+          </div><!--modal-->
+
+        <!-- sign-up modal -->
+        <div id="signup" class="modal fade" role="dialog"> 
+          <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Sign Up</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            <form>
+              <input type="text"  name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Enter Firstname" style="color:white">
+              <input type="text"  name="lastname" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter Lastname" style="color:white">
+              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" style="color:white">
+              <input type="password" name="password" class="password form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+              <input type="password" name="password" class="password form-control" aria-describedby="emailHelp" placeholder="Confirm Password">
+              <input class="btn login" type="submit" value="Sign Up" />
+            </form>
+          </div><!--modal-body-->
+          <div class="modal-footer">
+            <span style="color:white">Already have an account</span><a href="#login" data-dismiss="modal"  data-toggle="modal">Login</a>
+          </div> <!--modal-footer-->
+          </div><!--modal-content-->
+          </div><!--modal-dialogue-->
+          </div><!--modal-->
+
+          <!-- search modal -->
+          <div id="search" class="modal fade" role="dialog"> 
+            <div class="modal-dialog">
+              <div class="modal-content">
+              <div class="modal-body">
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" id=searchSite type="search" placeholder="Search" aria-label="Search" style="color:white">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+            </div><!--modal-body-->
+            </div><!--modal-content-->
+            </div><!--modal-dialogue-->
+            </div><!--modal-->
+
+        <!-- navbar -->
+        <nav class="navbar sticky-top navbar-expand-sm navbar-dark nav-pills green">
+          <a class="navbar-brand" href="#"><img src="./KeralaTourism/IMAGES/kerala-logo.png" alt="kerala tourism logo" style="height: 70px; width: 200px; margin-left: 80px" ></a>
+          <button class="navbar-toggler"
+                  type="button" data-toggle="collapse" 
+                  data-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" 
+                  aria-expanded="false"     
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="index.html">Home</a>
+              <div class="dropdown">
+                <a class="nav-item nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false">
+                  Explore
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="district.html"> Districts </a>
+                  <a class="dropdown-item" href="index.html"> Things to do </a>
+                  <a class="dropdown-item" href="index.html">Top Destinations</a>
+                  <a class="dropdown-item" href="index.html"> Learn More about Kerala</a>
+                  <a class="dropdown-item" href="index.html"> Book Your Trip </a>
+                </div> <!--dropdown-menu-->
+              </div> <!--dropdown-->
+                <a class="nav-item nav-link" href="#login" data-toggle="modal">Login</a> <!--login Trigger-->
+                <a class="nav-item nav-link" href="#signup" data-toggle="modal">Sign Up</a> <!--signup trigger-->
+                <a class="nav-item nav-link" href="#search" data-toggle="modal"><i class="fa-solid fa-magnifying-glass"></i></a><!--search trigger-->
+            </div> <!--navbar-nav-->
+          </div>
+        </nav>
+      </header>
+      <!-- navbar -->
+      <div class="content"> <!--heading picture-->
+        <img src="./KeralaTourism/IMAGES/wayanad-3.jpeg" alt="tholpetty wildlife sanctuary" style="width: 100%;">
+        <div class="wayanad-block">
+          <h2 class="text-center"> WAYANAD </h2>
+        </div>
+      </div>
+      <div class="container wayanad-main content">
+
+        <!-- about wayanad -->
+        <div class="row wayanad-row text-left">
+          <div class="col-sm-6">
+            <img src="./KeralaTourism/IMAGES/wayanad-6.jpeg" alt="wayanad-hills" style="width:100% "  >
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-5 wayanad-col">
+            <h3 class="display-4">  About Wayanad </h3>
+            <p class="text-secondary">
+              Wayanad, the green paradise is nestled among the mountains of the Western Ghats, forming the border world of the greener part of Kerala. Clean and pristine, enchanting and hypnotizing, this land is filled with history and culture. Located at a distance of 76 km. from wayanadthe sea shores of Kozhikode, this verdant hill station is full of plantations, forests and wildlife. Wayanad hills are contiguous to Mudumalai in Tamil Nadu and Bandhipur in Karnataka, thus forming a vast land mass for the wild life to move about in their most natural abode.
+            </p>
+            <!-- <p class="text-secondary">  
+              Regarding geographical location, Wayanad district stands on the southern top of the Deccan plateau and its chief glory is the majestic Western Ghats with lofty ridges and rugged terrain interspersed with dense forest, tangled jungles and deep valleys. The place also enjoys a strategic location as the leading tourist centres of South India like Ooty, Mysore, Bangalore, Coorg and Kannur are situated around this region.
+            </p> -->
+          </div>
+        </div> <!--row-->
+
+        <div class="row wayanad-sec wayanad-row text-left ">
+          <div class="col-sm-4 wayanad-col">
+            <!-- <h4 class="display-4">  About Wayanad </h4>
+            <p class="text-secondary">
+              Wayanad, the green paradise is nestled among the mountains of the Western Ghats, forming the border world of the greener part of Kerala. Clean and pristine, enchanting and hypnotizing, this land is filled with history and culture. Located at a distance of 76 km. from wayanadthe sea shores of Kozhikode, this verdant hill station is full of plantations, forests and wildlife. Wayanad hills are contiguous to Mudumalai in Tamil Nadu and Bandhipur in Karnataka, thus forming a vast land mass for the wild life to move about in their most natural abode.
+            </p> -->
+            <p class="text-secondary">  
+              Regarding geographical location, Wayanad district stands on the southern top of the Deccan plateau and its chief glory is the majestic Western Ghats with lofty ridges and rugged terrain interspersed with dense forest, tangled jungles and deep valleys. The place also enjoys a strategic location as the leading tourist centres of South India like Ooty, Mysore, Bangalore, Coorg and Kannur are situated around this region.
+            </p>
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-6 wayanad-sec-image">
+            <img src="./KeralaTourism/IMAGES/wayanad-5.jpeg" alt="wayanad-hills" style="width:100% "  >
+          </div>
+          <div class="col-sm-1"></div>
+        </div> <!--row-->
+
+        <!-- pookode lake -->
+        <div class="row wayanad-row text-left">
+          <div class="col-sm-6">
+            <img src="./KeralaTourism/IMAGES/Pookode-Lake- wayanad.jpeg" alt="pookode lake" style="width:100%;">
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-4">
+            <h4> Pookode Lake </h4>
+            <p class="text-secondary"> A natural fresh water lake surrounded by evergreen forest and rolling hills. A fresh water aquarium with large variety of fish is an added attraction. Tourists can also avail of boating facilities,cycling, children’s park, and a shopping centre for handicrafts and spices. </p>
+          </div>
+        </div> <!--row-->
+
+        <!-- edakkal caves -->
+        <div class="row wayanad-row text-left">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-5">
+            <h4>  Edakkal Caves </h4>
+            <p class="text-secondary">
+              A trip to Edakkal Caves is like a journey into our forgotten past. Located 10 kms from Sulthan Bathery, they have provided historians with great information regarding the lives and habits of our ancestors. The caves are two natural rock formations believed to have been formed by a large split in a huge rock. The carvings inside are extremely beautiful. A trek up the majestic Ambukuthi Hills is required to reach these caves. The aroma of coffee stays with you the entire way. It is truly a surreal experience as we step into the palms of history. 
+            </p>
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-5">
+            <img src="./KeralaTourism/IMAGES/edakkal-cave-wayanad.jpeg" alt="edakkal caves" style="width:80%">
+
+          </div>
+        </div> <!--row-->
+
+         <!-- chengeri rock -->
+         <div class="row wayanad-row text-left">
+          <div class="col-sm-6">
+            <h4> Cheengeri Rock </h4>
+            <p class="text-secondary">
+              Cheengeri Hill, located in the Ambalavayal Panchayath of the Sultan Bathery constituency, is one of the important trekking destinations in Wayanad. Cheengeri hills are located about 2600 m above sea level. Breathtaking views of Karappuzha Dam catchment area, Ambukuthimala, Manjamala
+              can be enjoyed
+            </p>
+          </div>
+          <!-- <div class="col-sm-1"></div> -->
+          <!-- <div class="col-sm-6 mr-0">
+            <img src="./KeralaTourism/IMAGES/Cheengeri-Hills-wayanad.jpeg" alt="Cheengeri-Hills-wayanad" style="width:100%; ">
+          </div> -->
+          <div class="col-sm-6 ">
+            <img src="./KeralaTourism/IMAGES/phantom-rock-wayanad.jpeg" alt="Cheengeri-Hills-wayanad" style="width:100%;">
+          </div>
+
+        <!-- sanctuary -->
+        <div class="row wayanad-row text-left">
+          <div class="col-sm-6">
+            <img src="./KeralaTourism/IMAGES/muthanga-wayanad.jpeg" alt="elephants at muthanga wild life sanctuary" style="width:100% "  >
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-5 wayanad-col">
+            <h4> Muthanga </h4>
+            <p class="text-secondary">
+              Muthanga Wildlife Sanctuary is considered to be the second largest wildlife sanctuary in Kerala and bio-geographically one of the richest tracts of peninsular India.
+            </p>
+          </div>
+        </div> <!--row-->
+
+        <div class="row wayanad-sec-tholpetty text-left ">
+          <div class="col-sm-4 wayanad-col ">
+            <h4> Tholpetty </h4>
+            <p class="text-secondary">  
+              Lying towards the north of the district of Wayanad, this region harbours a rich diversity of flora. Open to wildlife jeep safari twice a day, you are bound to spot various animals and bird species in their natural habitat during the 1.5-2 hour journey.
+            </p>
+          </div>
+          <div class="col-sm-2"></div>
+          <div class="col-sm-6 wayanad-sec-tholpetty-img">
+            <img src="./KeralaTourism/IMAGES/tholpedy-wayanad.jpeg" alt="elephants at tholpetty" style="width:100%; height:400px; "  >
+          </div>
+          <!-- <div class="col-sm-1"></div> -->
+        </div> <!--row-->
+           
+      </div> <!--container-->
+      
+  <!-- Footer -->
+<footer class="bg-dark text-center text-white footer">
+  <!-- Grid container -->
+  <div class="container p-4">
+   
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class=" text-left" style=" color: rgb(7, 71, 7)">Latest</h5>
+          <br>
+          <ul class="list-unstyled text-left mb-0">
+            <li>
+              <a href="#!" class="text-white">360 Tours</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">News</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Downloads</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-left" style=" color: rgb(7, 71, 7)" >About</h5>
+          <br>
+          <ul class="list-unstyled text-left mb-0">
+            <li>
+              <a href="#!" class="text-white">About Us</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Contact Us</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Other Members</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Incredible !ndia</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-left" style=" color: rgb(7, 71, 7)">Contact Us</h5>
+          <br>
+          <ul class="list-unstyled text-left mb-0">
+            <li>
+              <a href="#!" class="text-white"></a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"><i class="fa-solid fa-phone"></i>1-800-425-4747</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"><i class="fa-solid fa-envelope"></i> info@keralatourism.org.</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-left" style=" color: rgb(7, 71, 7)">Media</h5>
+
+          <ul class="list-unstyled text-left mb-0">
+            <li>
+              <a href="#!" class="text-white ">Video</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white ">Photo</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white ">Royalty Free Photos</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white ">Wallpapers</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+    <br>
+    <br>
+     <!-- Section: Social media -->
+     <section class="mb-1">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-3" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-3" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-3" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-3" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-3" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+    <!-- Section: Social media -->
+
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="#">keralatourism.org</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+
+      
+    <script src="https://kit.fontawesome.com/1b4252738e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
