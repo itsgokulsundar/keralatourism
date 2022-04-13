@@ -16,52 +16,82 @@
         <div id="login" class="modal fade" role="dialog"> 
           <div class="modal-dialog">
             <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Login</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <div class="modal-header">
+                <h4 class="modal-title">Login</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-            <form>
-              <input type="text" name="username" class="username form-control" placeholder="Username" required/>
-              <input type="password" name="password" class="password form-control" placeholder="Password"/>
-              <input class="btn login" type="submit" value="Login" />
-            </form>
-          </div><!--modal-body-->
-          <div class="modal-footer">
-            <a href="#signup" data-dismiss="modal" data-toggle="modal">Create account?</a>
-          </div> <!--modal-footer-->
-          </div><!--modal-content-->
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <input type="email" name="username" id="username" class="form-control" placeholder="Email" style="color:white;" required onfocusout="validateUsername()" onkeyup="validateUsername()"/>
+                  <p id="usernameError" style="font-size: 10px;"></p>
+                  <input type="password" name="password" id="loginpwd" class="password form-control" placeholder="Password" required onfocusout="validateloginPassword()" />
+                  <p id="loginpwdError" style="font-size: 10px;"></p><br>
+                  <input class="btn login" type="submit" value="Login" id="enter" />
+                </form>
+              </div><!--modal-body-->
+              <div class="modal-footer">
+                <a href="#signup" data-dismiss="modal" data-toggle="modal">Create account?</a>
+              </div> <!--modal-footer-->
+            </div><!--modal-content-->
           </div><!--modal-dialogue-->
-          </div><!--modal-->
+        </div><!--modal-->
 
         <!-- sign-up modal -->
         <div id="signup" class="modal fade" role="dialog"> 
           <div class="modal-dialog">
             <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Sign Up</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <div class="modal-header">
+                <h4 class="modal-title">Sign Up</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-            <form>
-              <input type="text"  name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Enter Firstname" style="color:white">
-              <input type="text"  name="lastname" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter Lastname" style="color:white">
-              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" style="color:white">
-              <input type="password" name="password" class="password form-control" aria-describedby="emailHelp" placeholder="Enter Password">
-              <input type="password" name="password" class="password form-control" aria-describedby="emailHelp" placeholder="Confirm Password">
-              <input class="btn login" type="submit" value="Sign Up" />
-            </form>
-          </div><!--modal-body-->
-          <div class="modal-footer">
-            <span style="color:white">Already have an account</span><a href="#login" data-dismiss="modal"  data-toggle="modal">Login</a>
-          </div> <!--modal-footer-->
-          </div><!--modal-content-->
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>  
+                  <input type="text"  name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Enter Firstname" style="color:white" required onkeyup="validateFname()" onfocusout="validateFname()"> 
+                  <p id="fnameError" style="font-size:10px;"></p>
+                  <input type="text"  name="lastname" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter Lastname" style="color:white" required onkeyup="validateLname()" onfocusout="validateLname()">
+                  <p id="lnameError" style="font-size:10px;"></p>
+                  <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" style="color:white" required onkeyup="validateEmail()" onfocusout="validateEmail()">
+                  <p id="emailError" style="font-size:10px;"></p>
+                  <input type="tel" name="phone"  class="form-control" id="phone" aria-describedby="emailHelp" placeholder="Enter Phone No." style="color:white" required onkeyup="validatePhone()" onfocusout="validatePhone()"> 
+                  <p id="phoneError" style="font-size:10px;"></p>
+                  <input type="password" name="password" id="pwd" class="password form-control" aria-describedby="emailHelp" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required onfocusout="validatePassword()" >
+                  <p id="passwordError" style="font-size:10px;"></p>
+                  <div id="pw-str">
+                    <div class="progress">
+                      <div id="password-strength" 
+                            class="progress-bar" 
+                            role="progressbar" 
+                            aria-valuenow="40" 
+                            aria-valuemin="0" 
+                            aria-valuemax="100" 
+                            style="width:0%;">
+                      </div>
+                    </div>
+                  </div>  
+                  <div id="message">
+                    <b>Password must contain the following:</b>
+                    <p></p>
+                    <p id="letter" class="invalid">a lowercase letter</p>
+                    <p id="capital" class="invalid">an UPPERCASE letter</p>
+                    <p id="number" class="invalid">a number</p>
+                    <p id="length" class="invalid">minimum 8 characters</p>
+                  </div>
+                  <input type="password" name="password" id="confirm" class="password form-control" aria-describedby="emailHelp" placeholder="Confirm Password" required>
+                  <p id="confirmError" style="font-size:10px;"></p>
+                  <input class="btn login" type="submit" value="Sign Up" id="signup"/>
+                  <!-- <button type="submit" class="btn login" id="signup" data-dismiss="modal" data-toggle="modal" data-target="#login"> Sign Up</button> -->
+                </form>
+              </div><!--modal-body-->
+              <div class="modal-footer">
+                <span style="color:white">Already have an account</span><a href="#login" data-dismiss="modal"  data-toggle="modal">Login</a>
+              </div> <!--modal-footer-->
+            </div><!--modal-content-->
           </div><!--modal-dialogue-->
-          </div><!--modal-->
+        </div><!--modal-->
 
           <!-- search modal -->
           <div id="search" class="modal fade" role="dialog"> 
@@ -115,12 +145,11 @@
       <!-- navbar -->
       <div class="main content"> 
         <!-- <h1>KERALA</h1> -->
-      <iframe width="100%" height="800" src="https://www.youtube-nocookie.com/embed/RU7ne5245xM?controls=0&autoplay=1&mute=1&loop=1&playlist=RU7ne5245xM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true">
-      </iframe>
+      <!-- <iframe width="100%" height="800" src="https://www.youtube-nocookie.com/embed/RU7ne5245xM?controls=0&autoplay=1&mute=1&loop=1&playlist=RU7ne5245xM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true">
+      </iframe> -->
 
       </div>
       <!-- main corousel -->
-      <!--
       <div class="container-fluid"> 
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -169,7 +198,6 @@
         </button>
       </div>
     </div> 
-        -->
     <!-- /main corousel -->
     <!-- discover kerala -->
     <div class="text-center text-secondary m-5 content">
@@ -632,6 +660,6 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
-    
+    <script src="/GitHub/itsgokulsundar.github.io/script.js"></script>
   </body>
 </html>
