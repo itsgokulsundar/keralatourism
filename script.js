@@ -299,3 +299,19 @@ signup.addEventListener("submit", validateLname);
 signup.addEventListener("submit", validateEmail);
 signup.addEventListener("submit", validatePhone);
 signup.addEventListener("submit", validatePassword);
+
+// // signup.onsubmit = function() {
+//   if(validateFname() == true &&
+//      validateLname() == true &&
+//      validateEmail() == true &&
+//      validatePhone() == true &&
+//      validatePassword() == true){
+//       // $('#signup').modal('hide');
+//       // $('#login').modal('show');
+//       return true;
+//      }
+//      else{
+//       //  signup.preventDefault();
+//      }
+
+// }
